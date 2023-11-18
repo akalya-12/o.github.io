@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dress Try-On AR</title>
+    <!-- Include A-Frame, AR.js, and A-Frame Extras -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js"></script>
+    <script src="https://unpkg.com/aframe-extras/dist/aframe-extras.min.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+    <!-- A-Frame scene with AR.js and A-Frame Extras -->
+    <a-scene embedded arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+        <!-- 3D model of the dress -->
+        <a-entity id="dressModel" gltf-model="#dressModelID" scale="0.5 0.5 0.5"></a-entity>
+
+        <!-- Add a reference to your dress model -->
+        <a-entity id="dressModelID" gltf-model="url(path/to/your/dress/model.gltf)"></a-entity>
+    </a-scene>
+</body>
+</html>
